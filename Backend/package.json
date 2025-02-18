@@ -8,8 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "vercel-build": "vite build"
+    "build": "vite build"
   },
   "dependencies": {
     "cors": "^2.8.5",
