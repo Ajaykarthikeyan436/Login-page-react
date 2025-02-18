@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/bg-7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+}
+
+.wrapper{
+    width: 430px;
+    padding: 80px 40px;
+    border: 2px solid rgba(6, 35, 57, .5);
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wrapper input{
+    padding: 10px;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 20px 0;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid rgba(6, 35, 57, .5);
+    outline: none;
+    color: black;
+    transition: all 0.4s;
+}
+
+.wrapper input::placeholder{
+    color: black;
+}
+
+.wrapper input:focus{
+    outline: none;
+    border: 2px solid rgba(6, 35, 57, .5);
+}
+
+.wrapper button{
+    width: 100%;
+    height: 45px;
+    margin: 20px 0;
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    backdrop-filter: blur(20px);
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    transform: translateY(-5px);
+}
+
+.success_wrapper{
+    width: 430px;
+    padding: 80px 40px;
+    border: 2px solid rgba(6, 35, 57, .5);
+    background-image:linear-gradient(to bottom,#009e56,white)     ;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation-duration: 1.5s;
+    animation-name: animation;
+}
+
+.success_wrapper h1{
+    font-size: 36px;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.fail_wrapper{
+    width: 430px;
+    padding: 80px 40px;
+    border: 2px solid rgba(6, 35, 57, .5);
+    background-image:linear-gradient(to bottom,red,white)     ;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation-name: animationfail;
+    animation-duration: 1s;
+}
+
+.fail_wrapper h1{
+    font-size: 36px;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@keyframes animation{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animationfail{
+    0%{
+        transform: translateX(0px)
+    }
+    50%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}

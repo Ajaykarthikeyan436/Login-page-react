@@ -1,0 +1,27 @@
+#Ignore node modules(frontend and backend)
+node_modules/
+
+#Ignore frontend build files (vercel will handle the build)
+frontend/dist/
+frontend/.vite/
+.vite/
+
+#Ignore logs
+.logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+#Ignore environment files (Contains sensitive API keys)
+.env
+frontend/.env
+backend/.env
+
+#Ignore system files (os.related)
+.DS_Store
+Thumbs.db
+
+#Ignore Vercel & Deployment files
+.vercel
+output.log
