@@ -3,7 +3,13 @@ const cors = require("cors")
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+    origin:"https://login-page-react-umber.vercel.app/",
+    methods:"GET,POST,PUT,DELETE",
+    credentials:true
+}))
+
+app.options("*",cors())
 
 app.use(express.json())//Middleware
 
