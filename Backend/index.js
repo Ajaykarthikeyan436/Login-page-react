@@ -29,7 +29,3 @@ app.post("/login",function(req,res){
 app.listen(5000,function(){
     console.log("Server Started....")
 })
-
-module.exports = (req, res) => {
-    res.json({ message: "Hello from Vercel!" });
-  };
